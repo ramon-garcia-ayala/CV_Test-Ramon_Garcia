@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ramón García — CV</title>
+  <meta name="description" content="CV of Ramón García Ayala — Architect">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#e83d1b;--muted:#6b6b6b;background:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; color:#111}
+    .wrap{max-width:1200px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .photo{width:56px;height:56px;border-radius:28px;overflow:hidden;flex:0 0 56px}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-family:'Playfair Display', Georgia, serif;font-size:20px;color:#111}
+    nav a{color:var(--accent);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+
+    /* increase space between header and main to 200% (double) */
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:start;margin-top:100px}
+    /* use a thin, elegant serif similar to Georgia for intro and project titles */
+    .intro{font-family:'Cormorant Garamond','Georgia',serif;font-weight:500;font-size:40px;line-height:1.04;color:#222}
+
+    .project{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-top:1px solid #f0eef6}
+    .project .meta{color:#8b6f9a;font-size:12px;font-weight:600;margin-bottom:8px}
+    /* project titles use same thin serif as intro */
+    .project h3{font-family:'Cormorant Garamond','Georgia',serif;font-weight:500;color:var(--accent);margin:0 0 8px;font-size:40px;line-height:1.04}
+    /* make project image match the profile column width (420px) and align to the right */
+    .project img{width:420px;height:auto;object-fit:cover;border-radius:8px;flex:0 0 420px}
+    .project .cta{display:inline-block;border:1px solid #ddd;padding:6px 8px;border-radius:4px;font-size:12px;color:#444;margin-top:8px}
+
+    .summary{font-size:16px;color:var(--muted);max-width:640px;margin-top:16px}
+
+    .footer{margin-top:42px;padding-top:18px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+    .links a{color:var(--accent);text-decoration:none;margin-right:18px}
+
+    .controls{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:6px;border:0;cursor:pointer;font-weight:600}
+    .btn.alt{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.project{flex-direction:column;gap:16px}.project img{width:100%;height:auto;max-height:360px}}
+    @media print{.controls, nav{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="photo" aria-hidden="true">
+          <img src="../Resources/Ram%C3%B3n%20-%20Color%20-%20Copy%20-%20Copy.png" alt="Ramón García" />
+        </div>
+        <div>
+          <div class="name">Ramón García Ayala</div>
+          <div style="font-size:12px;color:var(--muted)">Architect — AEC Technology · Research · Design</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#proyectos">Projects</a>
+        <a href="#experiencia">Experience</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <div class="intro">Ramón García is an Architect with a strong foundation in architectural technology and research, passionate about integrating cutting-edge tools into the AEC industry’s design workflows.</div>
+
+        <section id="proyectos" style="margin-top:22px">
+          <article class="project">
+            <div style="max-width:56%">
+              <div class="meta">Form-finding</div>
+              <h3>Architectural Incrustation</h3>
+              <a class="cta" href="#">Explore</a>
+            </div>
+            <img src="../Project Images/01_CF.png" alt="Architectural Incrustation" />
+          </article>
+
+          <article class="project">
+            <div style="max-width:56%">
+              <div class="meta">Computational Aggregation</div>
+              <h3>Geophorming Terrascape</h3>
+              <a class="cta" href="#">Explore</a>
+            </div>
+            <img src="../Project Images/02_ST.png" alt="Geophorming Terrascape" />
+          </article>
+
+          <!-- More projects: edit or add images in Resources -->
+        </section>
+
+        <section id="experiencia" style="margin-top:26px">
+          <h3 style="font-family:'Playfair Display',serif;color:#222;margin-bottom:8px"></h3>
+          <div>
+            <p class="intro">I seek to join forward-thinking architecture teams driving innovation, sustainability, and experimentation in the built environment.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- summary removed -->
+    </main>
+
+    <div class="footer">
+      <div class="links">© Ramón García Ayala — 2025</div>
+      <div class="controls">
+        <button class="btn" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function downloadVCard(){
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        "FN:Ramón García Ayala",
+        'EMAIL:gildardo.ramon.garcia.ayala@student.iaac.net',
+        'TEL:+523334543321',
+        'END:VCARD'
+      ].join('\r\n');
+      const blob = new Blob([vcard], {type: 'text/vcard'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'ramon_garcia.vcf'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
