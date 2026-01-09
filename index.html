@@ -23,7 +23,8 @@
     /* use a thin, elegant serif similar to Georgia for intro and project titles */
     .intro{font-family:'Cormorant Garamond','Georgia',serif;font-weight:500;font-size:40px;line-height:1.04;color:#222}
 
-    .project{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-top:1px solid #f0eef6}
+    /* project container; border color set per-article so each project can have its own accent */
+    .project{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-top:none}
     .project .meta{color:#8b6f9a;font-size:12px;font-weight:600;margin-bottom:8px}
     /* project titles use same thin serif as intro */
     .project h3{font-family:'Cormorant Garamond','Georgia',serif;font-weight:500;color:var(--accent);margin:0 0 8px;font-size:40px;line-height:1.04}
@@ -67,25 +68,47 @@
         <div class="intro">Ramón García is an Architect with a strong foundation in architectural technology and research, passionate about integrating cutting-edge tools into the AEC industry’s design workflows.</div>
 
         <section id="proyectos" style="margin-top:22px">
-          <article class="project">
+          <!-- Project 1 -->
+          <article class="project" style="border-top:1px solid #3246a4">
             <div style="max-width:56%">
-              <div class="meta">Form-finding</div>
-              <h3>Architectural Incrustation</h3>
+              <div class="meta" style="color:#3246a4">Form-finding</div>
+              <h3 style="color:#3246a4">Architectural Incrustation</h3>
               <a class="cta" href="#">Explore</a>
             </div>
             <img src="Project Images/01_CF.png" alt="Architectural Incrustation" />
           </article>
 
-          <article class="project">
+          <!-- Project 2 -->
+          <article class="project" style="border-top:1px solid #e34e91">
             <div style="max-width:56%">
-              <div class="meta">Computational Aggregation</div>
-              <h3>Geophorming Terrascape</h3>
+              <div class="meta" style="color:#e34e91">Computational Aggregation</div>
+              <h3 style="color:#e34e91">Geophorming Terrascape</h3>
               <a class="cta" href="#">Explore</a>
             </div>
             <img src="Project Images/02_ST.png" alt="Geophorming Terrascape" />
           </article>
 
-          <!-- More projects: edit or add images in Resources -->
+          <!-- Project 3 (new) -->
+          <article class="project" style="border-top:1px solid #a3914a">
+            <div style="max-width:56%">
+              <div class="meta" style="color:#a3914a">Structural Design</div>
+              <h3 style="color:#a3914a">Structural Optimization</h3>
+              <a class="cta" href="#">Explore</a>
+            </div>
+            <img src="Project Images/03_STR.gif" alt="Structural Optimization" />
+          </article>
+
+          <!-- Project 4 (new) -->
+          <article class="project" style="border-top:1px solid #6d3cff">
+            <div style="max-width:56%">
+              <div class="meta" style="color:#6d3cff">Environmental Analysis</div>
+              <h3 style="color:#6d3cff">Environmental Analysis at Malta</h3>
+              <a class="cta" href="#">Explore</a>
+            </div>
+            <img src="Project Images/04_ENV.gif" alt="Environmental Analysis at Malta" />
+          </article>
+
+          <!-- More projects: edit or add images in Project Images folder -->
         </section>
 
         <section id="experiencia" style="margin-top:26px">
